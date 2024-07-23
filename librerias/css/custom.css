@@ -1,0 +1,56 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    background-color: #198754;
+    color: white;
+    transition: all 0.3s;
+    z-index: 1000;
+}
+#sidebar.active {
+    left: 0;
+}
+#content {
+    flex: 1;
+    transition: all 0.3s;
+    margin-left: 0;
+}
+
+#content.active {
+    margin-left: 250px;
+}
+
+i {
+    margin: 15px;
+}
+
+#menu li {
+    width:100%;
+    margin-bottom: 16px;
+}
+#menu a {
+    text-decoration: none;
+    width:100%;
+}
+
+#menu li:hover {
+    color:#ffffff;
+    background-color: rgb(25 135 84);
+}
+
+.page-title {
+    padding-top: 60px;
+}
+
+.justify-text {
+    text-align: justify;
+}
