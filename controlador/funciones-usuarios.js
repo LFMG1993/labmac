@@ -99,9 +99,9 @@ function modificarUsuario() {
         let id_usuario = $('#id_usuariou').val();
         let identificacion = $('#identificacionu').val();
         let nombres = $('#nombresu').val();
-        let usuario = $('#usuariou').val();
-        let contrasena = $('#contrasenau').val();
         let email = $('#emailu').val();
+        let usuario = $('#emailu').val();
+        let contrasena = $('#contrasenau').val();
         let telefono = $('#telefonou').val();
         let rol_id = $('#rol_idu').val();
     
@@ -109,7 +109,7 @@ function modificarUsuario() {
     let cadena = "id_usuariou=" + id_usuario +
                         "&identificacionu=" + identificacion +
                         "&nombresu=" + nombres +
-                        "&usuariou=" + usuario +
+                        "&usuariou=" + email +
                         "&contrasenau=" + contrasena +
                         "&emailu=" + email +
                         "&telefonou=" + telefono +

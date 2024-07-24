@@ -24,27 +24,22 @@ if ($accion == 'registrar') {
             exit();
         }
     }
-
     // Obtener datos del formulario
     $identificacion = $_POST['identificacion'];
-    $usuario = $_POST['usuario'];
-    $contrasena = $_POST['contrasena'];
+    $nombres = $_POST['nombres'];
     $email = $_POST['email'];
     $telefono = $_POST['telefono'];
-    $rol_id = 1; // Asignar el valor adecuado para rol_id
-    
     // Validamos si el usuario ya está registrado
     $usuarioExiste = $misUsuarios->viewUsuario($identificacion);
     
     if (count($usuarioExiste) < 1) {
         // Registrar el usuario nuevo
-        $array = [];
         $array['identificacion'] = $identificacion;
-        $array['usuario'] = $usuario;
-        $array['contrasena'] = $contrasena;
+        $array['nombres'] = $nombres;
         $array['email'] = $email;
+        $array['contrasena'] = $identificacion;
+        $array['usuario'] = $email;
         $array['telefono'] = $telefono;
-        $array['rol_id'] = $rol_id;
         $response = $misUsuarios->insertUsuarios($array);
         if ($response) {
             echo 1; // Registro exitoso
@@ -58,12 +53,11 @@ if ($accion == 'registrar') {
     require_once 'conexion.php';
     $conexion = new Conexion();
     $array['identificacionu'] =  $_POST['identificacionu'];
-    $array['usuariou'] = $_POST['usuariou'];
+    $array['nombresu'] = $_POST['nombresu'];
+    $array['emailu'] = $_POST['emailu'];
     $array['contrasenau'] = $_POST['contrasenau'];
-    $array['emailu'] =$_POST['emailu'];
+    $array['usuariou'] = $_POST['emailu'];
     $array['telefonou'] = $_POST['telefonou'];
-    
-    
     
     $misUsuarios = new misUsuarios();
     $response = $misUsuarios->updateUsuarios($array);

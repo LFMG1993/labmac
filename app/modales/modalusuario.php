@@ -17,14 +17,6 @@
                         <input type="text" class="form-control" id="nombres" name="nombres" required>
                     </div>
                     <div class="col-sm-12">
-                        <label for="usuario">Usuario:</label>
-                        <input type="text" class="form-control" id="usuario" name="usuario" required>
-                    </div>
-                    <div class="col-sm-12">
-                        <label for="contrasena">Contraseña:</label>
-                        <input type="password" class="form-control" id="contrasena" name="contrasena" required>
-                    </div>
-                    <div class="col-sm-12">
                         <label for="email">Correo:</label>
                         <input type="email" class="form-control" id="email" name="email" required>
                     </div>
@@ -56,7 +48,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="col-sm-12">
-                        <label for="nombresu">Identificación:</label>
+                        <label for="identificacionu">Identificación:</label>
                         <div class="form-group">
                             <input type="text" class="form-control bg-light" id="identificacionu" readonly>
                         </div>
@@ -67,19 +59,19 @@
                     </div>
                     <div class="col-sm-12">
                         <label for="usuariou">Usuario:</label>
-                        <input type="text" class="form-control" id="usuariou" name="usuariou" required>
+                        <input type="text" class="form-control bg-light" id="usuariou" name="usuariou" readonly>
                     </div>
                     <div class="col-sm-12">
                         <label for="contrasenau">Contraseña:</label>
-                        <input type="text" class="form-control" id="contrasenau" name="contrasenau" required>
+                        <input type="password" class="form-control" id="contrasenau" name="contrasenau" required>
                     </div>
                     <div class="col-sm-12">
-                        <label for="email">Correo:</label>
+                        <label for="emailu">Correo:</label>
                         <input type="email" class="form-control" id="emailu" name="emailu" required>
                     </div>
                     <div class="col-sm-12">
                         <label for="telefonou">Telefono:</label>
-                        <input type="text" class="form-control" id="telefonou" name="telefonou" required>
+                        <input type="tel" class="form-control" id="telefonou" name="telefonou" required>
                     </div>
                 </div>
                 <div class="modal-footer">
