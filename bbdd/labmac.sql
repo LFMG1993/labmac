@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 24-07-2024 a las 00:24:48
+-- Tiempo de generación: 25-07-2024 a las 16:06:41
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -147,10 +147,10 @@ INSERT INTO `servicios_ensayos` (`id_servicios_ensayos`, `cotizacion`, `prefactu
 
 CREATE TABLE `usuario` (
   `id_usuario` int(2) NOT NULL,
-  `identificacion` varchar(15) NOT NULL,
+  `identificacion` int(25) NOT NULL,
   `nombres` varchar(50) DEFAULT NULL,
   `usuario` varchar(40) NOT NULL,
-  `contrasena` varchar(10) NOT NULL,
+  `contrasena` varchar(255) NOT NULL,
   `email` varchar(150) DEFAULT NULL,
   `telefono` varchar(14) DEFAULT NULL,
   `rol_id` int(2) DEFAULT NULL
@@ -161,9 +161,10 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id_usuario`, `identificacion`, `nombres`, `usuario`, `contrasena`, `email`, `telefono`, `rol_id`) VALUES
-(18, '37862195', NULL, '121212', '11111', 'emily@sena.edu.co', '123456', 0),
-(19, '1127580819', NULL, 'emilyk_rodriguez@soy.sena.edu.co', '123456', 'emilyk_rodriguez@soy.sena.edu.co', '3219197342', 0),
-(23, '1093769266', 'Leonardo Montes Garcia', 'lefemoga@gmail.com', '123456', 'lefemoga@gmail.com', '3221465775', 1);
+(19, 1127580819, 'Karin Emily ', 'emilyk_rodriguez@soy.sena.edu.co', '123456', 'emilyk_rodriguez@soy.sena.edu.co', '3219197342', 0),
+(23, 1093769266, 'Leonardo Montes Garcia', 'lefemoga@gmail.com', '$2y$10$HOXOC2N9DETus.VlK/VLROAQxunDyNq3sznP/QOqgNmN9latNQ7uy', 'lefemoga@gmail.com', '3221465775', 1),
+(26, 1127580820, 'Emily Rodriguez', 'test@example.us', '1127580820', 'test@example.us', '3133133131', 1),
+(27, 1127580821, 'Karin Rodriguez', 'teste@exemplo.us', '1127580821', 'teste@exemplo.us', '3133133131', 1);
 
 --
 -- Índices para tablas volcadas
@@ -242,7 +243,7 @@ ALTER TABLE `servicios_ensayos`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_usuario` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- Restricciones para tablas volcadas
