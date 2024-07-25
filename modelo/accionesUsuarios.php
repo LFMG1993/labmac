@@ -29,6 +29,7 @@ if ($accion == 'registrar') {
     $nombres = $_POST['nombres'];
     $email = $_POST['email'];
     $telefono = $_POST['telefono'];
+    $contraHash = password_hash($identificacion, PASSWORD_DEFAULT);
     // Validamos si el usuario ya está registrado
     $usuarioExiste = $misUsuarios->viewUsuario($identificacion);
     
@@ -37,7 +38,7 @@ if ($accion == 'registrar') {
         $array['identificacion'] = $identificacion;
         $array['nombres'] = $nombres;
         $array['email'] = $email;
-        $array['contrasena'] = $identificacion;
+        $array['contrasena'] = $contraHash;
         $array['usuario'] = $email;
         $array['telefono'] = $telefono;
         $response = $misUsuarios->insertUsuarios($array);
@@ -56,6 +57,9 @@ if ($accion == 'registrar') {
     $array['nombresu'] = $_POST['nombresu'];
     $array['emailu'] = $_POST['emailu'];
     $array['contrasenau'] = $_POST['contrasenau'];
+    if (!empty($array['contrasenau'])) {
+        $array['contrasenau'] = password_hash($array['contrasenau'], PASSWORD_DEFAULT);
+    }
     $array['usuariou'] = $_POST['emailu'];
     $array['telefonou'] = $_POST['telefonou'];
     
